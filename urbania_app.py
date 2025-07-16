@@ -14,7 +14,7 @@ st.title("🏘️ Dashboard de Inmuebles en Alquiler")
 # --- CARGA DE DATA ---
 @st.cache_data
 def load_data():
-    df = pd.read_excel("data.csv")
+    df = pd.read_excel("data.xlsx")
     df = df.dropna(subset=['lat', 'lon'])
     df['lat'] = pd.to_numeric(df['lat'], errors='coerce')
     df['lon'] = pd.to_numeric(df['lon'], errors='coerce')
